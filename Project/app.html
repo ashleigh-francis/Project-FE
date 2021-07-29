@@ -18,9 +18,9 @@
 </head>
 <h1> Workout Tracker</h1>
 <br>
-<body>
-
-    <section id="postSection">
+<body class="container">
+<main class="row">
+    <section id="postSection" class="col">
         <h2>Plan a Workout</h2>
 <form>
 <label for="dayOfWeek">Day of the Week:</label>
@@ -43,18 +43,52 @@
 <button type="submit">Submit</button>
 </form>
     </section>
-
-<section id="getByIdSection" class="col">
-    <h2>Get Workout By ID</h2>
-
-    <label for="WorkoutID">Workout ID</label>
-    <input type="number" name="WorkoutID" id="WorkoutID" min="1">
 <br>
-<button onclick="getByID();">GET</button>
+
+<section id="updateSection" class="col">
+    <h2>Update a Workout</h2>
+<form id = "updateWorkout">
+    <label for="updateId" class="form-label">Id</label>
+    <input type="text" id="updateId" name="updatedId">
+<br>
+
+<label for="updateDayOfWeek" class="form-label">Day of the Week:</label>
+<input type="text" id="updateDayOfWeek" name="updatedDayOfWeek" required>
+<br>
+
+<label for="updateHoursOfExercise" class="form-label">Hours of Exercise:</label>
+<input type="number" id="updateHoursOfExercise" name="updatedHoursOfExercise" required min="1" max="8">
+<br>
+
+<label for="updateTypeOfExercise" class="form-label">Type of Exercise:</label>
+<input type="text" id="updateTypeOfExercise" name="updatedTypeOfExercise" required>
+<br>
+
+<label for="updateGoal" class="form-label">What's your Goal?</label>
+<input type="Text" id= "updateGoal" name="updatedGoal" required>
+<br>
+
+<button type="reset">Reset</button>
+<button type="submit">Submit</button>
+</form>
 </section>
 
-<section id="getAllSection">
-     <h2>Get All Workouts</h2>
+
+
+<h2>Get Workout By ID</h2>
+  <label for="WorkoutID">Workout ID</label>
+    <input type="number" name="WorkoutID" id="WorkoutID" min="1">
+<br>
+<button onclick="getByID();">Get</button>
+    <section id="getByIdSection"></section>
+
+<br>
+
+
+<h2>Get All Workouts</h2>
+<button onclick="getAllWorkouts();">Get All Workouts</button>
+<section id="getAllSection" class="col">
+  
 </section>
 
 
