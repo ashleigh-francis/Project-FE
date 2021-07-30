@@ -97,7 +97,7 @@ document.querySelector("section#postSection > form").addEventListener('submit', 
     }).catch(err => console.log(err));
 
 });
-    //UPDATE - READ
+    //UPDATE 
 
  document.querySelector("section#updateSection > form#updateWorkout").addEventListener('submit', (e) => {
  e.preventDefault(); 
@@ -111,9 +111,9 @@ document.querySelector("section#postSection > form").addEventListener('submit', 
             typeOfExercise: form.updatedTypeOfExercise.value,
             goal: form.updatedGoal.value
         }
-        console.log (data);
+        
     
-        axios.put(`${baseURL}/replaceWorkout/${data.id.value}`,data)
+        axios.put(`${baseURL}/replaceWorkout/${data.id}`,data)
         .then((res) => {
             console.log(res);
             getAllWorkouts();
@@ -122,9 +122,4 @@ document.querySelector("section#postSection > form").addEventListener('submit', 
             form.updatedId.focus();
             alert("Workout updated successfully")
         }).catch(err => console.log(err));
-  })
-
-
-
-
-
+  });
